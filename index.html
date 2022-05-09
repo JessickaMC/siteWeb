@@ -1,1 +1,59 @@
-coucou
+<!--Page d'accueil, contient les règles du jeu et les accès aux highscores-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Jeu de l'intrus</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}" />
+	<!--<script src="{{ url_for('static', filename='js/script.js')}}"></script>-->
+	<style>
+		header
+		{
+			height: 50px;
+			margin: 0;
+			background-image : url('./static/img/carre.png');
+			background-size: 3.6%;
+		}	
+		h1, h2, div
+		{
+			margin:0;
+		}
+		img
+		{
+			vertical-align: bottom;
+		}
+	</style>
+	
+</head>
+<body style="background-color:#D8FEDD;">
+	
+	<!--BANDEAU-->
+	<div style="float:right" >Authors: Flavien Caminade et Jessicka Mucy-Clavier</div>
+	<h1 style="background-color:#A2F6AE;">Jeu de l'intrus</h1>
+	<header></header>
+	<div style="text-align:center;background-color:#A2F6AE;"><h5><button onclick="location.href='IdenUser';">S'identifier</button><button onclick="location.href='newUser';">S'inscrire</button></h5></div>
+
+	<!--BODY-->
+	<div style="text-align:center">
+		<!--TEXTE-->
+		<b>REGLES DU JEU:</b>
+		<div>
+			Le but du jeu est de trouver l'intrus parmi les images qui s'afficheront devant vous.<br>
+			Vous aurez plusieurs questions par partie.<br>
+			Votre score est calculé en fonction de votre temps : au-delà de 1min30 vous aurez perdu.<br>
+			En cas de mauvaise réponse vous aurez une pénalité de 10 secondes.<br>
+			Lors que vous gagnez une partie, vous avez accès au niveau suivant.<br>
+			Si vous perdez 5 parties dans l'heure, vous ne pourrez pas jouer pendant 4h.
+		</div>
+		<br>
+		<div style="margin-top:-1.4em"><h3>HIGHSCORE</h3></div>
+		<pre style="margin:auto;margin-top:-1em"><button onclick="location.href='scoreNiv';">Par niveau</button>   <button onclick="location.href='scoreDate';">Par date</button></pre>
+		<!--IMAGE-->	
+		<figure style="margin-top:-0.5em">
+			<img src="./static/img/niveau1_pokemon/herbe/bulbizard.png" alt="bulbizard" width="150" height="158">
+		</figure>
+	</div>
+	
+</body>
+</html> 
+
